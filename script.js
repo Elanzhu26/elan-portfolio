@@ -163,7 +163,11 @@
         </div>
         <div class="ssbs-project-media">
           ${ssbsPhotoMarkup(favoriteProject.media)}
-          <a class="ssbs-video-link" href="${favoriteProject.video.href}" target="_blank" rel="noreferrer noopener">${favoriteProject.video.label}<span aria-hidden="true">▶</span></a>
+          <a class="ssbs-video-link" href="${favoriteProject.video.href}" target="_blank" rel="noreferrer noopener" aria-label="${favoriteProject.video.label}">
+            <img src="${favoriteProject.video.poster}" alt="${favoriteProject.video.alt}" loading="lazy" decoding="async">
+            <span class="ssbs-video-play" aria-hidden="true">▶</span>
+            <span class="ssbs-video-label">${favoriteProject.video.label}</span>
+          </a>
         </div>
       </section>
       <div class="chapter-end"><span>end of chapter ${chapter.number}</span><button type="button" data-next>next chapter →</button></div>

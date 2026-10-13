@@ -331,7 +331,12 @@ window.ELAN_SITE = {
           subheading: "An interdisciplinary documentary",
           paragraphs: ["Three months in the making!"],
           media: { src: "assets/photos/ssbs/golden-mirror-documentary.jpg", alt: "The interdisciplinary Golden Mirror Experiment documentary team", label: "The Golden Mirror Experiment documentary team" },
-          video: { href: "https://youtu.be/Nkvmn1bO2EQ?si=6K41LyZO5_OMabm3", label: "Watch the documentary on YouTube" }
+          video: {
+            href: "https://youtu.be/Nkvmn1bO2EQ?si=6K41LyZO5_OMabm3",
+            label: "Watch the documentary on YouTube",
+            poster: "assets/photos/ssbs/golden-mirror-video-cover.jpg",
+            alt: "Golden Mirror Experiment documentary video preview"
+          }
         }
       ],
       gallery: [
