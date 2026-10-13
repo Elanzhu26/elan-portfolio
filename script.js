@@ -86,6 +86,7 @@
           ${writingNews.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}
           <a class="ssbs-guide-link" href="${writingNews.link.href}" target="_blank" rel="noreferrer">${writingNews.link.label}<span aria-hidden="true">↗</span></a>
         </div>
+        <div class="ssbs-writing-gallery">${writingNews.media.map(ssbsPhotoMarkup).join('')}</div>
       </section>
       <section class="ssbs-story-section ssbs-story-three-years" aria-labelledby="ssbs-story-${threeYears.number}">
         <div class="ssbs-story-copy">
@@ -112,7 +113,10 @@
           <h4>${favoriteProject.subheading}</h4>
           ${favoriteProject.paragraphs.map((paragraph) => `<p class="ssbs-project-note">${paragraph}</p>`).join('')}
         </div>
-        ${ssbsPhotoMarkup(favoriteProject.media)}
+        <div class="ssbs-project-media">
+          ${ssbsPhotoMarkup(favoriteProject.media)}
+          <a class="ssbs-video-link" href="${favoriteProject.video.href}" target="_blank" rel="noreferrer noopener">${favoriteProject.video.label}<span aria-hidden="true">▶</span></a>
+        </div>
       </section>
       <div class="chapter-end"><span>end of chapter ${chapter.number}</span><button type="button" data-next>next chapter →</button></div>
     </div>`;

@@ -298,7 +298,11 @@ window.ELAN_SITE = {
             "Luckily, our Director of News—which was me—prepared a guideline on how to organize and report news.",
             "I went from struggling to draft news articles to writing them easily with a clear structure. I wanted to pass that experience on so new members could write news more confidently. I invited two pros from the News Department to compile our insights, then turned our experience into this website."
           ],
-          link: { href: "https://ssbstvnews.com/", label: "Open the news-writing guide" }
+          link: { href: "https://ssbstvnews.com/", label: "Open the news-writing guide" },
+          media: [
+            { src: "assets/photos/ssbs/news-writing-workshop-close.jpg", alt: "Elan presenting a news-writing workshop", label: "Leading a news-writing workshop" },
+            { src: "assets/photos/ssbs/news-writing-workshop-room.jpg", alt: "Students attending Elan's news-writing workshop", label: "Sharing the guide with new members" }
+          ]
         },
         {
           number: "03",
@@ -326,7 +330,8 @@ window.ELAN_SITE = {
           title: "The Golden Mirror Experiment",
           subheading: "An interdisciplinary documentary",
           paragraphs: ["Three months in the making!"],
-          media: { src: "assets/photos/ssbs/golden-mirror-documentary.jpg", alt: "The interdisciplinary Golden Mirror Experiment documentary team", label: "The Golden Mirror Experiment documentary team" }
+          media: { src: "assets/photos/ssbs/golden-mirror-documentary.jpg", alt: "The interdisciplinary Golden Mirror Experiment documentary team", label: "The Golden Mirror Experiment documentary team" },
+          video: { href: "https://youtu.be/Nkvmn1bO2EQ?si=6K41LyZO5_OMabm3", label: "Watch the documentary on YouTube" }
         }
       ],
       gallery: [
