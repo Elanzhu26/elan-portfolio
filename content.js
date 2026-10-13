@@ -343,6 +343,51 @@ window.ELAN_SITE = {
         { src: "assets/photos/ssbs/crew-group.jpg", alt: "The SSBS TV crew together", label: "The crew" },
         { src: "assets/photos/ssbs/crew-certificates.jpg", alt: "SSBS TV members holding certificates", label: "Workshop certificates" }
       ]
+    },
+    {
+      id: "dialogue",
+      number: "05",
+      title: "Have a Dialogue",
+      subtitle: "What changes when I keep asking?",
+      accent: "#5f786e",
+      intro: "While volunteering at a hospital on the outskirts of Shanghai, I met an elderly patient who told me she had travelled 60 km to obtain her hypertension medicine because it was available only there. Why could she not access it at nearby hospitals? Online answers reduced the problem to ‘the hospital’s decision,’ so I decided to look deeper. I interviewed patients and health professionals—doctors, pharmacists, social workers, and medical lawyers. Here is what I found.",
+      findings: [
+        {
+          number: "01",
+          title: "Approval is only the beginning",
+          text: "An approved medicine is not automatically available at every hospital. National reimbursement, centralized procurement, and each hospital’s own formulary all shape what is stocked—and hospitals make different choices according to cost, supply, and patient demand."
+        },
+        {
+          number: "02",
+          title: "Access on paper can feel different",
+          text: "A substitute may meet regulatory standards, yet patients who have relied on the same medicine for years can experience a switch as a real loss of access. Policy defines continuity of treatment differently from the people living through it."
+        },
+        {
+          number: "03",
+          title: "Affordability and supply must coexist",
+          text: "Lower prices make medicine more affordable, but prices that do not support reliable production can also narrow supply. Access depends on balancing patient cost, public insurance, stable manufacturing, and incentives for innovation."
+        }
+      ],
+      systemTitle: "No single answer was enough",
+      systemText: [
+        "The more people I spoke with, the more systemic the question became. Access depends on coordination among regulators, insurers, pharmaceutical companies, hospitals, clinicians, and patients. Each person could explain one part of the system, but no single perspective explained the whole problem.",
+        "A legal interview widened the question further: access is shaped not only by hospital procurement, but also by regulatory review, patent protection, and the way legal institutions respond when patients cannot wait."
+      ],
+      reflectionTitle: "What dialogue changed",
+      reflectionText: [
+        "The hardest part was getting people to open up. One professional initially declined my interview because she felt I did not understand policy well enough. I went back, researched procurement and medical-insurance policy, and returned better prepared. She agreed to speak with me again and introduced me to a clinician.",
+        "I also heard answers that conflicted. A pharmacist emphasized the equivalence of generics, while some doctors and patients described differences they could feel. Dialogue taught me to treat every answer as one angle—not the entire truth."
+      ],
+      source: {
+        href: "https://docs.google.com/document/d/e/2PACX-1vS981SdfkXU6MIRvDictSJ7X4BC_Z6bm0az7G0gTDlxA8rsneK-VNTj_MsWEPe90F80V-i2QZFI8Zl_/pub",
+        label: "Read the full investigation"
+      },
+      mediaNote: "Some interviewees declined photos or recordings.",
+      media: [
+        { src: "assets/photos/dialogue/interview.jpg", alt: "Elan interviewing a health professional in a meeting room", label: "Listening to a health professional" },
+        { src: "assets/photos/dialogue/hospital-kiosk.jpg", alt: "Elan helping a hospital visitor use a self-service kiosk", label: "Volunteering at the hospital" },
+        { src: "assets/photos/dialogue/volunteering.jpg", alt: "Elan wearing a volunteer vest at a hospital event", label: "Between conversations with patients" }
+      ]
     }
   ]
 };
@@ -350,7 +395,7 @@ window.ELAN_SITE = {
 // Keep the public chapter sequence consistent across navigation, cover cards,
 // chapter numbering, and the “next chapter” controls.
 (() => {
-  const chapterOrder = ["music", "rowing", "ssbs-tv", "travel"];
+  const chapterOrder = ["music", "rowing", "ssbs-tv", "travel", "dialogue"];
   window.ELAN_SITE.chapters.sort(
     (a, b) => chapterOrder.indexOf(a.id) - chapterOrder.indexOf(b.id)
   );

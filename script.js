@@ -25,6 +25,7 @@
     if (chapter.id === 'rowing') return rowingChapterMarkup(chapter);
     if (chapter.id === 'travel') return travelChapterMarkup(chapter);
     if (chapter.id === 'ssbs-tv') return ssbsChapterMarkup(chapter);
+    if (chapter.id === 'dialogue') return dialogueChapterMarkup(chapter);
     return `
       <header class="chapter-header" style="--accent:${chapter.accent}">
         <p class="kicker">chapter ${chapter.number}</p>
@@ -47,6 +48,53 @@
       <img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async">
       <figcaption>${item.label}</figcaption>
     </figure>`;
+  }
+
+  function dialoguePhotoMarkup(item) {
+    return `<figure class="dialogue-photo">
+      <img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async">
+      <figcaption>${item.label}</figcaption>
+    </figure>`;
+  }
+
+  function dialogueChapterMarkup(chapter) {
+    return `<div class="dialogue-story" style="--dialogue-accent:${chapter.accent}">
+      <header class="dialogue-opening">
+        <p class="dialogue-eyebrow">chapter ${chapter.number} / listening across the system</p>
+        <h2 id="dialogue-title">${chapter.title}</h2>
+        <p class="dialogue-subtitle">${chapter.subtitle}</p>
+        <p class="dialogue-intro">${chapter.intro}</p>
+      </header>
+      <section class="dialogue-findings" aria-labelledby="dialogue-findings-title">
+        <p class="dialogue-section-label">What I heard</p>
+        <h3 id="dialogue-findings-title">Three findings, many voices</h3>
+        <div class="dialogue-finding-grid">${chapter.findings.map((finding) => `<article class="dialogue-finding">
+          <span>${finding.number}</span><h4>${finding.title}</h4><p>${finding.text}</p>
+        </article>`).join('')}</div>
+      </section>
+      <section class="dialogue-system" aria-labelledby="dialogue-system-title">
+        <div>
+          <p class="dialogue-section-label">Across the table</p>
+          <h3 id="dialogue-system-title">${chapter.systemTitle}</h3>
+        </div>
+        <div class="dialogue-system-copy">${chapter.systemText.map((paragraph) => `<p>${paragraph}</p>`).join('')}</div>
+      </section>
+      <section class="dialogue-gallery-section" aria-labelledby="dialogue-gallery-title">
+        <div class="dialogue-gallery-heading">
+          <p class="dialogue-section-label">Field notes</p>
+          <h3 id="dialogue-gallery-title">Conversations behind the question</h3>
+          <p>${chapter.mediaNote}</p>
+        </div>
+        <div class="dialogue-gallery">${chapter.media.map(dialoguePhotoMarkup).join('')}</div>
+      </section>
+      <section class="dialogue-reflection" aria-labelledby="dialogue-reflection-title">
+        <p class="dialogue-section-label">Reflection</p>
+        <h3 id="dialogue-reflection-title">${chapter.reflectionTitle}</h3>
+        <div class="dialogue-reflection-copy">${chapter.reflectionText.map((paragraph) => `<p>${paragraph}</p>`).join('')}</div>
+        <a class="dialogue-source-link" href="${chapter.source.href}" target="_blank" rel="noreferrer noopener">${chapter.source.label}<span aria-hidden="true">↗</span></a>
+      </section>
+      <div class="chapter-end"><span>end of chapter ${chapter.number}</span><button type="button" data-next>back to the beginning →</button></div>
+    </div>`;
   }
 
   function ssbsChapterMarkup(chapter) {
@@ -368,7 +416,7 @@
   });
 
   function initMediaReveal() {
-    const frames = [...document.querySelectorAll('#page-rowing .rowing-frame, #page-music .music-frame, #page-travel .travel-photo, #page-ssbs-tv .ssbs-photo')];
+    const frames = [...document.querySelectorAll('#page-rowing .rowing-frame, #page-music .music-frame, #page-travel .travel-photo, #page-ssbs-tv .ssbs-photo, #page-dialogue .dialogue-photo')];
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     frames.forEach((frame, index) => {
