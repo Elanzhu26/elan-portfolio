@@ -341,3 +341,15 @@ window.ELAN_SITE = {
     }
   ]
 };
+
+// Keep the public chapter sequence consistent across navigation, cover cards,
+// chapter numbering, and the “next chapter” controls.
+(() => {
+  const chapterOrder = ["music", "rowing", "ssbs-tv", "travel"];
+  window.ELAN_SITE.chapters.sort(
+    (a, b) => chapterOrder.indexOf(a.id) - chapterOrder.indexOf(b.id)
+  );
+  window.ELAN_SITE.chapters.forEach((chapter, index) => {
+    chapter.number = String(index + 1).padStart(2, "0");
+  });
+})();
