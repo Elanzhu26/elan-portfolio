@@ -353,7 +353,6 @@ window.ELAN_SITE = {
       id: "dialogue",
       number: "05",
       title: "Have a Dialogue",
-      subtitle: "What changes when I keep asking?",
       accent: "#5f786e",
       intro: "While volunteering at a hospital on the outskirts of Shanghai, I met an elderly patient who told me she had travelled 60 km to obtain her hypertension medicine because it was available only there. Why could she not access it at nearby hospitals? Online answers reduced the problem to ‘the hospital’s decision,’ so I decided to look deeper. I interviewed patients and health professionals—doctors, pharmacists, social workers, and medical lawyers. Here is what I found.",
       findings: [

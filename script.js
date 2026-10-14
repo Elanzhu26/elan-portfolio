@@ -62,7 +62,6 @@
       <header class="dialogue-opening">
         <p class="dialogue-eyebrow">chapter ${chapter.number} / listening across the system</p>
         <h2 id="dialogue-title">${chapter.title}</h2>
-        <p class="dialogue-subtitle">${chapter.subtitle}</p>
         <p class="dialogue-intro">${chapter.intro}</p>
       </header>
       <section class="dialogue-findings" aria-labelledby="dialogue-findings-title">
