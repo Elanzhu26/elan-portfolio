@@ -465,3 +465,18 @@
 @media(max-width:900px){#page-dialogue .dialogue-opening,#page-dialogue .dialogue-findings,#page-dialogue .dialogue-system,#page-dialogue .dialogue-gallery-section,#page-dialogue .dialogue-reflection{padding-left:34px;padding-right:34px}#page-dialogue .dialogue-system{grid-template-columns:1fr;gap:30px}#page-dialogue .dialogue-system-copy{padding-top:25px}#page-dialogue .dialogue-finding-grid{grid-template-columns:1fr}#page-dialogue .dialogue-finding{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:20px}#page-dialogue .dialogue-finding span{grid-row:1/3;margin:5px 0 0}#page-dialogue .dialogue-finding p{grid-column:2;margin-top:14px}}
 @media(max-width:560px){#page-dialogue .dialogue-opening{padding:52px 20px 64px}#page-dialogue .dialogue-opening h2{font-size:64px}#page-dialogue .dialogue-subtitle{font-size:28px}#page-dialogue .dialogue-intro{font-size:16px;line-height:1.68}#page-dialogue .dialogue-findings,#page-dialogue .dialogue-system,#page-dialogue .dialogue-gallery-section,#page-dialogue .dialogue-reflection{padding:52px 20px}#page-dialogue .dialogue-findings>h3,#page-dialogue .dialogue-system h3,#page-dialogue .dialogue-gallery-heading h3,#page-dialogue .dialogue-reflection>h3{font-size:48px}#page-dialogue .dialogue-finding{display:block}#page-dialogue .dialogue-finding span{margin-bottom:24px}#page-dialogue .dialogue-gallery{grid-template-columns:minmax(0,300px)}#page-dialogue .dialogue-reflection-copy{grid-template-columns:1fr;gap:24px}}
 @media(prefers-reduced-motion:reduce){#page-dialogue .dialogue-photo.reveal-on-scroll{opacity:1;transform:none;transition:none}}
+
+/* Dialogue article: keep the report itself central and remove the earlier card-based framing. */
+#page-dialogue .dialogue-article{max-width:900px;margin:0 auto;padding:clamp(68px,8vw,112px) clamp(30px,6vw,72px);background:#f7f3eb}
+#page-dialogue .dialogue-opening{padding-bottom:clamp(58px,6vw,84px)}
+#page-dialogue .dialogue-article-section{padding:0 0 clamp(56px,7vw,84px)}
+#page-dialogue .dialogue-article-section:last-child{padding-bottom:0}
+#page-dialogue .dialogue-article-section h3{margin:0 0 30px;color:#1d302b;font-size:clamp(38px,5vw,62px);font-weight:400;line-height:1;letter-spacing:-.035em}
+#page-dialogue .dialogue-article-section>p,#page-dialogue .dialogue-article-subsection>p{margin:0 0 22px;color:#485650;font-size:17px;line-height:1.82}
+#page-dialogue .dialogue-article-subsection{margin:42px 0 0;padding-top:34px;border-top:1px solid rgba(29,48,43,.18)}
+#page-dialogue .dialogue-article-subsection h4{margin:0 0 22px;color:#2a463d;font-family:var(--serif);font-size:clamp(26px,3.2vw,36px);font-weight:400;line-height:1.08}
+#page-dialogue .dialogue-gallery-section{padding:0 clamp(30px,7vw,100px) clamp(68px,8vw,104px);background:#f7f3eb;color:#263630}
+#page-dialogue .dialogue-media-note{margin:0 auto 24px;color:#6c7671;font-size:13px;font-style:italic;text-align:center}
+#page-dialogue .dialogue-article-footer{padding:0 clamp(30px,7vw,100px) clamp(68px,8vw,104px);background:#f7f3eb;text-align:center}
+#page-dialogue .dialogue-article-footer .dialogue-source-link{margin-top:0}
+@media(max-width:560px){#page-dialogue .dialogue-article{padding:52px 20px}#page-dialogue .dialogue-article-section>p,#page-dialogue .dialogue-article-subsection>p{font-size:16px;line-height:1.75}#page-dialogue .dialogue-gallery-section,#page-dialogue .dialogue-article-footer{padding-left:20px;padding-right:20px}}

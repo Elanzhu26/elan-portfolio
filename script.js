@@ -62,36 +62,24 @@
       <header class="dialogue-opening">
         <p class="dialogue-eyebrow">chapter ${chapter.number} / listening across the system</p>
         <h2 id="dialogue-title">${chapter.title}</h2>
-        <p class="dialogue-intro">${chapter.intro}</p>
       </header>
-      <section class="dialogue-findings" aria-labelledby="dialogue-findings-title">
-        <p class="dialogue-section-label">What I heard</p>
-        <h3 id="dialogue-findings-title">Three findings, many voices</h3>
-        <div class="dialogue-finding-grid">${chapter.findings.map((finding) => `<article class="dialogue-finding">
-          <span>${finding.number}</span><h4>${finding.title}</h4><p>${finding.text}</p>
-        </article>`).join('')}</div>
-      </section>
-      <section class="dialogue-system" aria-labelledby="dialogue-system-title">
-        <div>
-          <p class="dialogue-section-label">Across the table</p>
-          <h3 id="dialogue-system-title">${chapter.systemTitle}</h3>
-        </div>
-        <div class="dialogue-system-copy">${chapter.systemText.map((paragraph) => `<p>${paragraph}</p>`).join('')}</div>
-      </section>
-      <section class="dialogue-gallery-section" aria-labelledby="dialogue-gallery-title">
-        <div class="dialogue-gallery-heading">
-          <p class="dialogue-section-label">Field notes</p>
-          <h3 id="dialogue-gallery-title">Conversations behind the question</h3>
-          <p>${chapter.mediaNote}</p>
-        </div>
+      <article class="dialogue-article">
+        ${chapter.articleSections.map((section) => `<section class="dialogue-article-section">
+          <h3>${section.title}</h3>
+          ${section.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}
+          ${(section.subsections || []).map((subsection) => `<div class="dialogue-article-subsection">
+            <h4>${subsection.title}</h4>
+            ${subsection.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join('')}
+          </div>`).join('')}
+        </section>`).join('')}
+      </article>
+      <section class="dialogue-gallery-section" aria-label="Interview photographs">
+        <p class="dialogue-media-note">${chapter.mediaNote}</p>
         <div class="dialogue-gallery">${chapter.media.map(dialoguePhotoMarkup).join('')}</div>
       </section>
-      <section class="dialogue-reflection" aria-labelledby="dialogue-reflection-title">
-        <p class="dialogue-section-label">Reflection</p>
-        <h3 id="dialogue-reflection-title">${chapter.reflectionTitle}</h3>
-        <div class="dialogue-reflection-copy">${chapter.reflectionText.map((paragraph) => `<p>${paragraph}</p>`).join('')}</div>
+      <footer class="dialogue-article-footer">
         <a class="dialogue-source-link" href="${chapter.source.href}" target="_blank" rel="noreferrer noopener">${chapter.source.label}<span aria-hidden="true">↗</span></a>
-      </section>
+      </footer>
       <div class="chapter-end"><span>end of chapter ${chapter.number}</span><button type="button" data-next>back to the beginning →</button></div>
     </div>`;
   }

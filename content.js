@@ -354,33 +354,63 @@ window.ELAN_SITE = {
       number: "05",
       title: "Have a Dialogue",
       accent: "#5f786e",
-      intro: "While volunteering at a hospital on the outskirts of Shanghai, I met an elderly patient who told me she had travelled 60 km to obtain her hypertension medicine because it was available only there. Why could she not access it at nearby hospitals? Online answers reduced the problem to ‘the hospital’s decision,’ so I decided to look deeper. I interviewed patients and health professionals—doctors, pharmacists, social workers, and medical lawyers. Here is what I found.",
-      findings: [
+      articleSections: [
         {
-          number: "01",
-          title: "Approval is only the beginning",
-          text: "An approved medicine is not automatically available at every hospital. National reimbursement, centralized procurement, and each hospital’s own formulary all shape what is stocked—and hospitals make different choices according to cost, supply, and patient demand."
+          title: "The Problem",
+          paragraphs: [
+            "While volunteering at a hospital, I met an elderly patient who walked with a slight limp. She told me that she had travelled 60 kilometres to this rural hospital to obtain her blood-pressure medication because nearby hospitals no longer prescribed it.",
+            "My grandmother had a similar experience. Three years ago, she could get her valsartan and amlodipine tablets at nearby hospitals, but now those hospitals carry only substitutes. For someone who has relied on the same treatment for years, switching to a so-called equivalent medicine may not feel equivalent at all. Her only solution has been to visit distant hospitals in the hope that one of them has the medicine in stock.",
+            "I began to wonder: if a medicine has been approved and is on the market, why can it still be so hard for patients to obtain? To find out, I began speaking with people in different roles. A group of older adults with diabetes told me that, for a time, Glucophage was unavailable at hospitals, so they had to buy it from online platforms or retail pharmacies. Although they could still afford it, they needed reliable and convenient access."
+          ]
         },
         {
-          number: "02",
-          title: "Access on paper can feel different",
-          text: "A substitute may meet regulatory standards, yet patients who have relied on the same medicine for years can experience a switch as a real loss of access. Policy defines continuity of treatment differently from the people living through it."
+          title: "The Investigation",
+          paragraphs: [
+            "During breaks from volunteering, I interviewed a pharmacist who worked with cardiovascular medicines, a nurse with more than 20 years of experience, several attending physicians, and hospital social workers."
+          ],
+          subsections: [
+            {
+              title: "Approval does not guarantee availability",
+              paragraphs: [
+                "After a medicine is approved, it may still need to go through national reimbursement negotiations before being covered by public health insurance. Hospitals draw much of their supply from medicines covered by national reimbursement and centralized procurement policies, while also maintaining their own formularies.",
+                "Hospitals still have some discretion over which medicines to stock. Their Pharmacy and Therapeutics Committees consider procurement rules, patient demand, cost, and supply. A less expensive alternative may allow a hospital to purchase a larger quantity and maintain a more stable supply. Hospitals also prioritise medicines according to the diseases they treat most frequently, so their inventories can differ.",
+                "At first, medicine availability seemed to come down to procurement policy. That was how most hospital staff explained what I had observed. But procurement policy alone could not fully account for the complaints I heard from patients."
+              ]
+            },
+            {
+              title: "Regulatory access is not lived access",
+              paragraphs: [
+                "Even when a hospital offers an alternative said to have the same effect, patients may still feel that they have lost access to the treatment they know and trust. Pharmacists explained that if a supplier temporarily stopped providing a medicine, the hospital would offer another product that had passed a consistency evaluation so treatment could continue.",
+                "From a patient’s perspective, however, switching brands after years on the same medicine may feel disruptive. One patient told me that the change seemed to affect the stability of his blood pressure. One physician also said that medicines can pass a consistency evaluation and still differ in ways that patients or doctors notice.",
+                "The chief hospital social worker used an analogy: many students meet the requirements to graduate, but they do not all earn the same grades. Passing the evaluation establishes a baseline, she explained, but patients and doctors may still perceive differences among medicines. This revealed a gap between what policy considers access and what patients expect when they try to obtain a medicine."
+              ]
+            },
+            {
+              title: "Lower prices can sometimes reduce access",
+              paragraphs: [
+                "A doctor offered a striking view: low prices may contribute to shortages of certain medicines. Centralized procurement can reduce manufacturers’ profit margins. When prices remain too low relative to production costs, manufacturers may have less incentive to continue producing certain medicines.",
+                "Low prices can also create challenges for innovative medicines. Companies need to recover the high cost of research and development, which can make it difficult to accept the lower prices often associated with reimbursement. Medicines need to be affordable for patients and the healthcare system, but their prices must also allow manufacturers to maintain a reliable supply.",
+                "My investigation had become systemic. Access depends on coordination among the National Healthcare Security Administration, pharmaceutical companies, and hospitals. No single actor could answer the whole question."
+              ]
+            }
+          ]
         },
         {
-          number: "03",
-          title: "Affordability and supply must coexist",
-          text: "Lower prices make medicine more affordable, but prices that do not support reliable production can also narrow supply. Access depends on balancing patient cost, public insurance, stable manufacturing, and incentives for innovation."
+          title: "The Legal Perspective",
+          paragraphs: [
+            "Once I realised that the hospital could offer only part of the picture, I looked for perspectives from the pharmaceutical industry and the legal profession. My hospital interviews had focused mainly on what happens after a medicine enters the Chinese market: reimbursement, procurement, and substitution. The legal interview allowed me to ask why a medicine available abroad might still be unavailable in China.",
+            "Foreign medicines face a strict approval process because countries use different safety and quality standards. They still need to undergo China’s own regulatory review before being launched. This protects patients, but people with rare diseases may not be able to wait for life-saving medicines.",
+            "The lawyer also told me that law shapes drug development, which I had previously thought of as purely a matter of technology. Patents encourage innovation by protecting companies’ investments, but they can also prevent competitors from commercially producing the same medicine. Other companies may need to obtain a licence, wait for a patent to expire, or develop a different technical solution. Institutions affect access at every stage, beginning with research and patent protection."
+          ]
+        },
+        {
+          title: "Reflections",
+          paragraphs: [
+            "The greatest challenge I faced was getting people to open up. At one point, a professional declined my interview because she felt I did not know enough about policy and was wasting other people’s time. I was embarrassed, but I decided that she had a point. The following week, I spent hours researching recent procurement and medical-insurance policies. When I showed her what I had learned, she agreed to meet with me again, offered valuable insights, and introduced me to a clinician.",
+            "What interested me most was hearing conflicting answers. A pharmacist said that generic medicines worked just as well as the originator product, while some doctors expressed doubts. Each person saw the issue from a different angle, so each answer reflected only part of the larger picture.",
+            "I learned that no single perspective can explain a systemic problem. When I hear different views, I now remind myself to evaluate them critically rather than accept any one person’s account as the complete truth."
+          ]
         }
-      ],
-      systemTitle: "No single answer was enough",
-      systemText: [
-        "The more people I spoke with, the more systemic the question became. Access depends on coordination among regulators, insurers, pharmaceutical companies, hospitals, clinicians, and patients. Each person could explain one part of the system, but no single perspective explained the whole problem.",
-        "A legal interview widened the question further: access is shaped not only by hospital procurement, but also by regulatory review, patent protection, and the way legal institutions respond when patients cannot wait."
-      ],
-      reflectionTitle: "What dialogue changed",
-      reflectionText: [
-        "The hardest part was getting people to open up. One professional initially declined my interview because she felt I did not understand policy well enough. I went back, researched procurement and medical-insurance policy, and returned better prepared. She agreed to speak with me again and introduced me to a clinician.",
-        "I also heard answers that conflicted. A pharmacist emphasized the equivalence of generics, while some doctors and patients described differences they could feel. Dialogue taught me to treat every answer as one angle—not the entire truth."
       ],
       source: {
         href: "https://docs.google.com/document/d/e/2PACX-1vS981SdfkXU6MIRvDictSJ7X4BC_Z6bm0az7G0gTDlxA8rsneK-VNTj_MsWEPe90F80V-i2QZFI8Zl_/pub",
